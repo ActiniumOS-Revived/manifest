@@ -34,7 +34,6 @@ Buiilding Flags
 '''bash
 Add the following variables:
 
-
 #Lunch banner maintainer variable
 ACTINIUM_MAINTAINER="Accrese"
 
