@@ -13,25 +13,25 @@ Base Firmware
 Getting Started
 ----------------------
 **Initialize local repository**
-'''bash
+```bash
 repo init -u https://github.com/Project-Actinides/manifest -b Baklava
-'''
+```
 
 **Sync up with this command**
-'''bash
+```bash
 repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
-'''
+```
 
 Preparing device for building ActiniumOS
 -----------------------
 **Inherit lineageOS vendor stuff**
-'''bash
+```bash
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-'''
+```
 
 Buiilding Flags
 -----------------------
-'''bash
+```bash
 Add the following variables:
 
 #Lunch banner maintainer variable
@@ -54,10 +54,11 @@ PRODUCT_NO_CAMERA := true/false
 
 #Whether to ship lawnchair launcher, false by default
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER :=true/false
+```
 
 GMS Flags
 -----------------------
-'''bash
+```bash
 # GMS build flags, true by default
 # Ship with GMS packages, replaces default AOSP packages with Gooogle manufactured packages
 WITH_GMS := true/false
@@ -72,35 +73,36 @@ WITH_GMS := false
 # VANILLA build with MICROG
 WITH_GMS := false
 WITH_MICROG := true
+```
 
 Building the firmware
 -----------------------
 **Setting up environment**
-'''bash
+```bash
 . build/envsetup.sh
-'''
+```
 
 **riseup uses all available cores to assign jobs hence making -jX no-op, to utilize -jX use:**
-'''bash
+```bash
 riseup <device> <build-type>
-'''
-'''bash
+```
+```bash
 rise b
-'''
+```
 
 **Building fastboot update package**
-'''bash
+```bash
 riseup <device> <build-type>
-'''
-'''bash
+```
+```bash
 rise fb
-'''
+```
 
 **Signed build(Repacking with releasekey for play integrity, certification etc.)**
-'''bash
+```bash
 riseup <device> <build-type>
-'''
-'''bash
+```
+```bash
 # Perform manual key generation
 # 'gk' will include keys from vendor/lineage-priv/keys
 # after generating keys
@@ -111,13 +113,13 @@ gk -h/--help
 
 # Build the firmware with the preferred method except for 'rise sb'
 rise/rise b/mka bacon etc.
-'''
+```
 
 **Building fully signed ota package**
-'''bash
+```bash
 riseup <device> <build-type>
-'''
-'''bash
+```
+```bash
 # 'rise sb' is an attempt to automate LineageOS builds signing.
 # Reference: https://wiki.lineageos.org/signing_builds
 # In case of errors or any other difficulties, avoid using 'rising sb'
@@ -127,20 +129,20 @@ riseup <device> <build-type>
 # For manual key generation, please use "gk":
 gk -f (to regenerate old keys, rise sb automatically generate keys for full build signing if no keys exists)
 rise sb
-'''
+```
 
 **Opting out of signed builds**
-'''bash
+```bash
 riseup <device> <build-type>
-'''
-'''bash
+```
+```bash
 remove_keys # This will remove generated keys so the system will revert back to test keys.
-'''
+```
 
 **For more information about rise build command:**
-'''bash
+```bash
 rise help
-'''
+```
 
 Credits
 ---------------
@@ -162,8 +164,7 @@ Credits
 * [**Project-Fluid**](https://github.com/Project-Fluid)
 * [**Project Kaleidoscope**](https://github.com/Project-Kaleidoscope)
 * [**Project Radiant**](https://github.com/ProjectRadiant)
-* **RiceDroid**
-* **risingOS**
+* [**RisingOS-Revived**](https://github.com/RisingOS-Revived)
 * [**minaripenguin**](https://github.com/minaripenguin)
 * [**AxionAOSP**](https://github.com/AxionAOSP)
 * [**SparkOS**](https://github.com/Spark-Rom)
