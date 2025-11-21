@@ -964,7 +964,7 @@
     <copyfile src="lk_inc.mk" dest="lk_inc.mk" />
   </project>
 
-  <include name="snippets/rising.xml" />
+  <include name="snippets/actinium.xml" />
   <include name="snippets/extra.xml" />
   <include name="snippets/lineage.xml" />
 </manifest>
