@@ -117,7 +117,7 @@
   <project path="vendor/google/overlays/ThemeIcons" name="android_vendor_google_overlays_ThemeIcons" remote="actinium" />
   <project path="vendor/microg" name="android_vendor_microg" remote="actinium" />
   <project path="vendor/lineage" name="android_vendor_lineage" revision="sixteen" remote="actinium" />
-  <project path="vendor/rising" name="android_vendor_rising" remote="actinium" />
+  <project path="vendor/actinium" name="android_vendor_actinium" remote="actinium" />
   <project path="vendor/official_devices" name="official_devices" revision="fifteen" remote="actinium" />
   <project path="vendor/pixel-style" name="android_vendor_pixel-style" remote="actinium" />
   <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="actinium" />
